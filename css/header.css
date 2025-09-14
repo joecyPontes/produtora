@@ -11,6 +11,7 @@ background-color: black;
 .item {
   position: relative;
   background-color: transparent;
+  width: 100%; /* ajuste a largura das divs */
   height: 100%;
 }
 

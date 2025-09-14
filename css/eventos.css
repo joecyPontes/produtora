@@ -1,0 +1,154 @@
+#eventos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--corbranco);
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 2rem;
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+.card-evento{
+  width: 30vh;
+  height: 40vh;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-evento:hover {
+    transform: scale(1.2);
+}
+
+
+
+.info-evento {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+.info-evento a {
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.info-evento a:hover {
+    color: #c13584;
+}
+
+
+
+
+
+
+
+
+
+.card-evento img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+
+
+
+.info-evento h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info-evento p {
+    font-size: 1.2rem;
+    color: var(--corpreta);
+}
+
+button {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+
+
+
+
+.compra{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.formcompra h2{
+    color: #fff;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.formcompra{
+    margin: 18px;
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: rgb(255, 255, 255) hidden 1px;
+    box-shadow: rgb(128, 128, 128) 0px 0px 10px;
+    gap: 6px;
+    font-size: 1.6em;
+    background-color: #000000;
+}
+
+@media screen and (max-width: 500px) {
+.formcompra{
+    margin: 18px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: rgb(255, 255, 255) hidden 1px;
+    box-shadow: rgb(128, 128, 128) 0px 0px 10px;
+    gap: 6px;
+
+}
+}
+
+
+.infocompra{
+    display: flex;
+    flex-direction: column;
+}
+
+.check{
+    display: flex;
+    flex-direction: column;
+}

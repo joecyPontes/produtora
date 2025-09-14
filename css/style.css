@@ -1,0 +1,66 @@
+@import url('nav.css');
+@import url('about.css');
+@import url('footer.css');
+@import url('home.css');
+@import url('eventos.css');
+@import url('header.css');
+:root{
+    --corlaranja:hsl(24, 74%, 58%);
+    --corvermelho:hsl(13, 96%, 47%);
+    --corroxo:hsla(273, 95%, 54%, 0.788);
+    --corbranco:hsl(0, 0%, 100%);
+    --corpreto: hsl(0, 0%, 0%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-weight: lighter;
+
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    scroll-behavior: smooth;
+    background-image:  linear-gradient(to left, var(--corroxo), var(--corvermelho), var(--corlaranja));
+    background-size: 500% 100%;
+    animation: degradeAnimado 2s infinite alternate;
+    scroll-behavior: smooth;
+}
+
+
+@keyframes degradeAnimado{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+.section{
+    height: 100vh;
+
+    padding-block: 2.5rem;
+}
+
+.section h1{
+    color: var(--corbranco);
+    text-align: center;
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

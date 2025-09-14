@@ -1,0 +1,144 @@
+@keyframes palavras{
+    0%, 20%{
+        content: "ÚNICA!";
+    }
+    21%,40%{
+        content: "INESQUECÍVEL!";
+    }
+    41%,100%{
+        content: "CONEXÃO!";
+    }
+}
+
+.txtAnimado{
+    width: 100%;
+    font-weight: 300;
+    color: var(--corbranco);
+}
+
+.txtAnimado span{
+    position: relative;
+}
+
+.txtAnimado span::before{
+    content: "";
+    color: brown;
+    animation: palavras 8s infinite;
+}
+
+.txtAnimado span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid brown;
+    right: -2px;
+
+    animation: cursor .6s infinite, digita 8s steps(10) infinite;
+    width: calc(100% + 4px);
+    background-color: var(--corpreto);
+}
+
+@keyframes digita {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 4px);
+    }
+}
+
+@keyframes cursor{
+    0%{
+        border-left: 2px solid var(--corpreto);
+    }
+}
+
+#about{
+    width: 100%;
+    background-color: var(--corpreto);
+    display: flex;
+    flex-direction: column;
+    color: var(--corbranco);
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 2rem;
+}
+
+#about img{
+    width: 60vh;
+    height: 30vh;
+}
+
+.textotec{
+    display: flex;
+    flex-direction: column;
+    padding: 8%;
+    font-size: 1rem;
+    width: 100%;
+    background-color: var(--corpreto);
+    height: auto;
+    gap: 8px;
+}
+
+.ptec{
+    text-align:justify;
+}
+
+
+
+
+.card-dj{
+  width: 20vh;
+  height: 20vh;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-dj:hover {
+  transform: scale(1.2);
+}
+
+.card-dj img {
+  max-width: 100%;
+  max-height: 15vh;
+  object-fit: cover;
+}
+
+.info {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info a {
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.info a:hover {
+  color: #c13584;
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.djs{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}

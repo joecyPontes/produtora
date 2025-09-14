@@ -1,0 +1,101 @@
+footer{
+    width: 100%;
+    height: auto;
+    padding-bottom: 10vh;
+    background-color: var(--corpreto);
+    color: var(--corbranco);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    justify-content: center;
+}
+
+
+
+.grupo{
+    margin-top: 20px;
+    height: 30vh;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.grupo div{
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    text-align: end;
+    width: 100%;
+    gap: 1rem;
+}
+
+#redes-sociais{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer a{
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    align-items: end;
+    text-decoration: none;
+    color: var(--corbranco);
+    position: relative;
+}
+
+.footer a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--corroxo);
+    opacity: 50%;
+}
+
+
+.footer a:nth-child(1)::before{
+    animation: preencher 1s 0.4s  infinite;
+}
+
+
+.footer a:nth-child(2)::before{
+    animation: preencher 1s 0.2s infinite;
+}
+
+.footer a:nth-child(3)::before{
+    animation: preencher 1s 0.3s infinite;
+}
+.footer a:nth-child(4)::before{
+    animation: preencher 1s 0.1s infinite;
+}
+
+
+.footer a:hover{
+    color: var(--corroxo);
+}
+
+
+
+
+@keyframes preencher{
+    0%{width: 0;}
+    30%{width: 6%;}
+    60%{width: 10%;}
+}
+

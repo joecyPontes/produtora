@@ -1,0 +1,70 @@
+
+header {
+    background-color: black;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.item {
+  position: relative;
+  background-color: transparent;
+  width: 100%; /* ajuste a largura das divs */
+  height: 100%;
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--corroxo);
+  opacity: 50%;
+}
+
+.item:nth-child(1)::before {
+  animation: preenche 1s 0.4s infinite;
+}
+
+.item:nth-child(2)::before {
+  animation: preenche 1s 0.2s infinite;
+}
+
+.item:nth-child(3)::before {
+  animation: preenche 1s 0.3s infinite;
+}
+
+.item:nth-child(4)::before {
+  animation: preenche 1s 0.1s infinite;
+}
+
+.item:nth-child(5)::before {
+  animation: preenche 1s 0.2s infinite;
+}
+.item:nth-child(6)::before {
+  animation: preenche 1s 0.3s infinite;
+}
+.item:nth-child(7)::before {
+  animation: preenche 1s 0.1s infinite;
+}
+.item:nth-child(8)::before {
+  animation: preenche 1s 0.3s infinite;
+}
+.item:nth-child(9)::before {
+  animation: preenche 1s 0.2s infinite;
+}
+@keyframes preenche {
+  0% {
+    height: 0;
+  }
+  30% {
+    height: 30%;
+  }
+  60% {
+    height: 50%;
+  }
+}

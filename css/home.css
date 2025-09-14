@@ -19,7 +19,7 @@
 #youtube-iframe {
     z-index: 1;
     opacity: 1; /* Define a opacidade do iframe */
-    width: 400px;
+    width: auto;
     height: 250px;
     border-radius: 0px;
     border: var(--corlaranja) solid 2px;

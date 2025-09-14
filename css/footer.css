@@ -10,6 +10,10 @@ footer{
     flex-wrap: wrap;
     font-size: 1rem;
     justify-content: center;
+    background-image: url(/imagens/ec971add-d62b-4fcd-815d-4079aaf8cd8d.png);
+    background-repeat: no-repeat;
+    background-position: left 1rem bottom 10vh;
+    background-size: auto 100px;
 }
 
 

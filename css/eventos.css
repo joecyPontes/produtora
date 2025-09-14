@@ -21,13 +21,13 @@
   height: 40vh;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 1s ease-in-out;
   display: flex;
   flex-direction: column;
 }
 
 .card-evento:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
 
 

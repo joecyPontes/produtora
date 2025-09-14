@@ -94,10 +94,11 @@
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease;
   display: flex;
   align-items: center;
   flex-direction: column;
+
 }
 
 .card-dj:hover {

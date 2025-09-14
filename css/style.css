@@ -26,11 +26,9 @@ html{
 }
 
 body{
-    scroll-behavior: smooth;
     background-image:  linear-gradient(to left, var(--corroxo), var(--corvermelho), var(--corlaranja));
     background-size: 500% 100%;
     animation: degradeAnimado 2s infinite alternate;
-    scroll-behavior: smooth;
 }
 
 

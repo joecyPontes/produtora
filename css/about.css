@@ -1,12 +1,18 @@
 @keyframes palavras{
     0%, 20%{
-        content: "ÚNICA!";
+        content: "MUSÍCA!";
     }
     21%,40%{
-        content: "INESQUECÍVEL!";
+        content: "ARTE!";
     }
-    41%,100%{
-        content: "CONEXÃO!";
+    41%,60%{
+        content: "CONCEITO!";
+    }
+    61%, 80%{
+        content: "CULTURA!";
+    }
+    81%,100%{
+        content: "RESPEITO!";
     }
 }
 
@@ -89,7 +95,7 @@
 
 .card-dj{
   width: 20vh;
-  height: 20vh;
+  height: 18vh;
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -113,6 +119,7 @@
 .info {
   max-width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -122,10 +129,22 @@
   text-decoration: none;
   text-align: center;
   margin-bottom: 6px;
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+  font-size: .6rem;
+  align-items: center;
+  gap: 10px;
 }
 
 .info a:hover {
   color: #c13584;
+}
+
+.info a i{
+    display: flex;
+    max-width: 100%;
+    font-size: 1rem;
 }
 
 .cards{

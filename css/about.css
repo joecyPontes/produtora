@@ -69,6 +69,11 @@
     justify-content: center;
     height: auto;
     gap: 2rem;
+    
+    background-image: url(/imagens/technera_vive_white_tower.png);
+    background-repeat: no-repeat;
+    background-position: right 1px bottom;
+    background-size: auto 18vh;
 }
 
 #about img{

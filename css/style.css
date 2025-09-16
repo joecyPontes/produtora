@@ -32,7 +32,7 @@ html{
 body{
     background-image:  linear-gradient(to left, var(--corroxo), var(--corvermelho), var(--corlaranja));
     background-size: 500% 100%;
-    animation: degradeAnimado 4s infinite alternate;
+    animation: degradeAnimado 2.6s infinite alternate;
 }
 
 

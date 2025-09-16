@@ -6,7 +6,8 @@
     background-image: url('/imagens/BackgroundL_S.jpg');
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
+    height: 40vh;
 }
 
 .musica {

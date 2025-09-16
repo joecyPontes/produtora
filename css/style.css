@@ -5,9 +5,9 @@
 @import url('eventos.css');
 @import url('header.css');
 :root{
-    --corlaranja:hsl(24, 74%, 58%);
-    --corvermelho:hsl(13, 96%, 47%);
-    --corroxo:hsla(273, 95%, 54%, 0.788);
+    --corlaranja:#FF6102;
+    --corvermelho: #B7021C;
+    --corroxo: #61029C;
     --corbranco:hsl(0, 0%, 100%);
     --corpreto: hsl(0, 0%, 0%);
 }
@@ -32,7 +32,7 @@ html{
 body{
     background-image:  linear-gradient(to left, var(--corroxo), var(--corvermelho), var(--corlaranja));
     background-size: 500% 100%;
-    animation: degradeAnimado 2s infinite alternate;
+    animation: degradeAnimado 4s infinite alternate;
 }
 
 

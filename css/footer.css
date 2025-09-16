@@ -8,7 +8,7 @@ footer{
     gap: 1rem;
     align-items: center;
     flex-wrap: wrap;
-    font-size: 1rem;
+    flex-direction: column;
     justify-content: center;
     background-image: url(/imagens/ec971add-d62b-4fcd-815d-4079aaf8cd8d.png);
     background-repeat: no-repeat;
@@ -20,26 +20,28 @@ footer{
 
 .grupo{
     margin-top: 20px;
-    height: 30vh;
-    padding: 8px;
+    height: 28vh;
+    width: 30vh;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 10px;
+    text-align: center;
+    font-size: .8rem;
 }
 
 .grupo div{
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
-    gap: 6px;
 }
 
 .footer{
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: end;
     width: 100%;
     gap: 1rem;

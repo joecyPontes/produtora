@@ -1,18 +1,18 @@
 @keyframes palavras{
     0%, 20%{
-        content: "MUSÍCA!";
+        content: "MÚSICA";
     }
     21%,40%{
-        content: "ARTE!";
+        content: "ARTE";
     }
     41%,60%{
-        content: "CONCEITO!";
+        content: "CONCEITO";
     }
     61%, 80%{
-        content: "CULTURA!";
+        content: "CULTURA";
     }
     81%,100%{
-        content: "RESPEITO!";
+        content: "RESPEITO";
     }
 }
 
@@ -29,7 +29,7 @@
 .txtAnimado span::before{
     content: "";
     color: brown;
-    animation: palavras 8s infinite;
+    animation: palavras 20s infinite;
 }
 
 .txtAnimado span::after{
@@ -39,7 +39,7 @@
     border-left: 2px solid brown;
     right: -2px;
 
-    animation: cursor .6s infinite, digita 8s steps(10) infinite;
+    animation: cursor .6s infinite, digita 20s steps(10) infinite;
     width: calc(100% + 4px);
     background-color: var(--corpreto);
 }
@@ -89,6 +89,8 @@
 .ptec{
     text-align:justify;
 }
+
+
 
 
 

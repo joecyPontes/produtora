@@ -120,11 +120,11 @@ button:hover {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    border: rgb(255, 255, 255) hidden 1px;
-    box-shadow: rgb(128, 128, 128) 0px 0px 10px;
+    border: rgb(51, 37, 37) hidden 1px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 10px;
     gap: 6px;
     font-size: 1.6em;
-    background-color: #000000;
+    background-color: transparent;
 }
 
 @media screen and (max-width: 500px) {

@@ -1,4 +1,4 @@
-#home{
+#home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,24 +8,20 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 47vh;
+    height: 50vh;
 }
 
-.musica {
-    position: relative;
-}
 
 
 
 
 #youtube-iframe {
     z-index: 1;
-    opacity: 1; /* Define a opacidade do iframe */
+    opacity: 1;
+    /* Define a opacidade do iframe */
     width: auto;
     height: 250px;
     border-radius: 0px;
     border: var(--corlaranja) solid 2px;
     box-shadow: var(--corroxa) 0px 0px 10px;
 }
-
-

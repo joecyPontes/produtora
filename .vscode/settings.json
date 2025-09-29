@@ -1,0 +1,11 @@
+{
+    // Live Server configs
+    "liveServer.settings.port": 5500,
+    "liveServer.settings.root": "/",
+    "liveServer.settings.NoBrowser": true,
+
+    // Outras configs do VS Code (opcional, pode remover se já tiver as suas)
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000
+}

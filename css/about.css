@@ -1,38 +1,48 @@
-@keyframes palavras{
-    0%, 20%{
+@keyframes palavras {
+
+    0%,
+    20% {
         content: "MÚSICA";
     }
-    21%,40%{
+
+    21%,
+    40% {
         content: "ARTE";
     }
-    41%,60%{
+
+    41%,
+    60% {
         content: "CONCEITO";
     }
-    61%, 80%{
+
+    61%,
+    80% {
         content: "CULTURA";
     }
-    81%,100%{
+
+    81%,
+    100% {
         content: "RESPEITO";
     }
 }
 
-.txtAnimado{
+.txtAnimado {
     width: 100%;
     font-weight: 300;
     color: var(--corbranco);
 }
 
-.txtAnimado span{
+.txtAnimado span {
     position: relative;
 }
 
-.txtAnimado span::before{
+.txtAnimado span::before {
     content: "";
     color: brown;
     animation: palavras 20s infinite;
 }
 
-.txtAnimado span::after{
+.txtAnimado span::after {
     content: "";
     position: absolute;
     height: 100%;
@@ -45,21 +55,40 @@
 }
 
 @keyframes digita {
-    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
         width: 0;
     }
-    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
         width: calc(100% + 4px);
     }
 }
 
-@keyframes cursor{
-    0%{
+@keyframes cursor {
+    0% {
         border-left: 2px solid var(--corpreto);
     }
 }
 
-#about{
+#about {
     width: 100%;
     background-color: var(--corpreto);
     display: flex;
@@ -69,30 +98,28 @@
     justify-content: center;
     height: auto;
     gap: 2rem;
-    
-    background-image: url(/imagens/technera_vive_white_tower.png);
     background-repeat: no-repeat;
     background-position: right 1px bottom;
     background-size: auto 18vh;
 }
 
-#about img{
+#about img {
     width: 30vh;
     height: 30vh;
 }
 
-.textotec{
+.textotec {
     display: flex;
     flex-direction: column;
-    padding: 8%;
+    padding: 10%;
     font-size: 1rem;
     background-color: var(--corpreto);
     height: auto;
     gap: 8px;
 }
 
-.ptec{
-    text-align:justify;
+.ptec {
+    text-align: justify;
 }
 
 
@@ -100,61 +127,61 @@
 
 
 
-.card-dj{
-  width: 20vh;
-  height: 18vh;
-  background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.5s ease;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.card-dj {
+    width: 20vh;
+    height: 18vh;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
 }
 
 .card-dj:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .card-dj img {
-  max-width: 100%;
-  max-height: 15vh;
-  object-fit: cover;
+    max-width: 100%;
+    max-height: 15vh;
+    object-fit: cover;
 }
 
 .info {
-  max-width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .info a {
-  color: #000000;
-  text-decoration: none;
-  text-align: center;
-  margin-bottom: 6px;
-  display: flex;
-  max-width: 100%;
-  flex-direction: row;
-  font-size: .6rem;
-  align-items: center;
-  gap: 10px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 6px;
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    font-size: .6rem;
+    align-items: center;
+    gap: 10px;
 }
 
 .info a:hover {
-  color: #c13584;
+    color: #c13584;
 }
 
-.info a i{
+.info a i {
     display: flex;
     max-width: 100%;
     font-size: 1rem;
 }
 
-.cards{
+.cards {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -162,17 +189,10 @@
     justify-content: space-evenly;
 }
 
-.djs{
+.djs {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 2rem;
-}
-
-form input{
-    border-radius: 4px;
-}
-
-form label{
-    font-size: 1rem;
+    padding: 10%;
 }

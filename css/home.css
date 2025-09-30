@@ -8,10 +8,55 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 50vh;
+    height: 80vh;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 34vh;
+    height: 36vh;
+    padding: 32px;
+    border-radius: 32px;
+    overflow: hidden;
+
+}
+
+.dot-box {
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    background-color: #c1c1c1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .6s ease;
 }
 
 
+.active,
+.dot:hover {
+    background-color: #D41D1D;
+}
+
+.slide {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.slide img {
+    width: 34vh;
+    height: 34vh;
+    border-radius: 32px;
+}
 
 
 

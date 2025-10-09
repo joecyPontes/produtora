@@ -37,3 +37,7 @@
     padding: 6px;
     border-radius: 6px;
 }
+
+.form-row button:hover {
+    background-color: var(--corvermelho);
+}

@@ -71,7 +71,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 'pista-individual': 'https://mpago.la/26utHM6',
                 'pista-casadinha': 'https://mpago.la/1dy8ou3',
                 'backstage-individual': 'https://mpago.la/2TThspw',
-                'backstage-casadinha': 'https://mpago.la/2N1y5Ds'
+                'backstage-casadinha': 'https://mpago.la/2N1y5Ds',
+                'early-entry-pista': 'https://mpago.la/2R4QuMW',
+                'early-entry-backstage': 'https://mpago.la/1xEPECX',
             };
 
             const targetUrl = links[tipoVal] || 'obrigado.html';

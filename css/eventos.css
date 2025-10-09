@@ -72,10 +72,12 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
+
 }
 
 .tempo {
     display: flex;
+    color: var(--corvermelho);
 }
 
 

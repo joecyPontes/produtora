@@ -3,12 +3,16 @@
     flex-direction: column;
     background-color: black;
     padding: 10px;
+    gap: 6px;
     border: solid 2px;
     border-color: black;
     border-radius: 6px;
     color: aliceblue;
     width: 32vh;
-    height: 30vh;
+    height: 34vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .form-ingressos input {
@@ -19,4 +23,17 @@
 
 .telefone-row {
     display: flex;
+}
+
+.form-row {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.form-row button {
+    width: 40%;
+    padding: 6px;
+    border-radius: 6px;
 }

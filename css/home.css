@@ -1,14 +1,14 @@
 #home {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     background-image: url('/imagens/BackgroundL_S.jpg');
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 40vh;
+    height: 100vh;
 }
 
 .cont {
@@ -24,41 +24,9 @@
 
 }
 
-.dot-box {
-    text-align: center;
+#logohome {
+    width: 30vh;
 }
-
-.dot {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 2px;
-    background-color: #c1c1c1;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color .6s ease;
-}
-
-
-.active,
-.dot:hover {
-    background-color: #D41D1D;
-}
-
-.slide {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.slide img {
-    width: 34vh;
-    height: 34vh;
-    border-radius: 32px;
-}
-
-
 
 #youtube-iframe {
     z-index: 1;

@@ -1,0 +1,22 @@
+.form-ingressos {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+    border: solid 2px;
+    border-color: black;
+    border-radius: 6px;
+    color: aliceblue;
+    width: 32vh;
+    height: 30vh;
+}
+
+.form-ingressos input {
+    width: 100%;
+    border-radius: 4px;
+    height: 2rem;
+}
+
+.telefone-row {
+    display: flex;
+}

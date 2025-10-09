@@ -65,6 +65,61 @@
                 src="https://www.youtube.com/embed/videoser?list=RDPT8IzIVwQAA&autoplay=1&mute=1&enablejsapi=1"
                 frameborder="0" allowfullscreen></iframe>
         </div>
+
+        <img id="logohome" src="/imagens/ec971add-d62b-4fcd-815d-4079aaf8cd8d.png" alt="">
+
+        <form id="form-ingressos" class="form-ingressos"
+            action="https://hook.us2.make.com/xhydjtkf74bqsj6n1m7k45ugreyyehje" method="post">
+
+            <div id="timer">
+                <div id="dias"></div>
+                <div class="tempo">
+                    <div id="horas"></div>
+                    <div id="minutos"></div>
+                    <div id="segundos"></div>
+                </div>
+            </div>
+            Ingresso 3 Anos Technera Vive
+
+            <div class="form-row">
+                <input id="nome" name="nome" type="text" placeholder="Nome Completo" required aria-required="true">
+            </div>
+
+            <div class="form-row">
+                <input id="cpf" name="cpf" type="text" inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                    placeholder="CPF" required aria-required="true" maxlength="14">
+            </div>
+
+            <div class="form-row telefone-row">
+                <div class="telefone-col">
+                    <input id="ddd" name="ddd" type="text" inputmode="numeric" pattern="\d{2}" placeholder="DDD"
+                        required aria-required="true" maxlength="2">
+                </div>
+                <div class="telefone-col">
+                    <input id="telefone" name="telefone" type="text" inputmode="tel" pattern="\d{8,9}"
+                        placeholder="981234567" required aria-required="true" maxlength="9">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required aria-required="true">
+            </div>
+
+            <div class="form-row">
+                <label for="tipo">Tipo de Ingresso</label>
+                <select id="tipo" name="tipo" required aria-required="true">
+                    <option value="" disabled selected>Escolha uma opção</option>
+                    <option value="pista-individual">Pista Individual R$ 80,00</option>
+                    <option value="pista-casadinha">Pista Casadinha R$ 140,00</option>
+                    <option value="backstage-individual">Backstage Individual R$ 120,00</option>
+                    <option value="backstage-casadinha">Backstage Casadinha R$ 200,00</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <button type="submit">Comprar</button>
+            </div>
+        </form>
     </section>
 
 
@@ -74,16 +129,6 @@
         <div class="cards">
 
             <div class="card-evento">
-
-                <div id="timer">
-                    <div id="dias"></div>
-                    <div class="tempo">
-                        <div id="horas"></div>
-                        <div id="minutos"></div>
-                        <div id="segundos"></div>
-                    </div>
-                </div>
-
                 <img src="/imagens/tresanos.png" alt="Imagem do Evento">
                 <div class="info-evento">
                     <h2>3 Anos Technera Vive</h2>
@@ -106,52 +151,6 @@
 
     </section>
 
-    <section class=" ingressos">
-
-        <h1>Comprar Ingresso</h1>
-
-        <form id="form-ingressos" class="form-ingressos"
-            action="https://hook.us2.make.com/xhydjtkf74bqsj6n1m7k45ugreyyehje" method="post">
-            <div class="form-row">
-                <input id="nome" name="nome" type="text" placeholder="Nome Completo" required aria-required="true">
-            </div>
-
-            <div class="form-row">
-                <input id="cpf" name="cpf" type="text" inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-                    placeholder="CPF: 000.000.000-00" required aria-required="true" maxlength="14">
-            </div>
-
-            <div class="form-row telefone-row">
-                <div class="telefone-col">
-                    <input id="ddd" name="ddd" type="text" inputmode="numeric" pattern="\d{2}" placeholder="DDD"
-                        required aria-required="true" maxlength="2">
-                </div>
-                <div class="telefone-col">
-                    <input id="telefone" name="telefone" type="text" inputmode="tel" pattern="\d{8,9}"
-                        placeholder="981234567" required aria-required="true" maxlength="9">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required aria-required="true">
-            </div>
-
-            <div class="form-row">
-                <label for="tipo">Tipo de Ingresso</label>
-                <select id="tipo" name="tipo" required aria-required="true">
-                    <option value="" disabled selected>Escolha uma opção</option>
-                    <option value="pista-individual">Pista Individual</option>
-                    <option value="pista-casadinha">Pista Casadinha</option>
-                    <option value="backstage-individual">Backstage Individual</option>
-                    <option value="backstage-casadinha">Backstage Casadinha</option>
-                </select>
-            </div>
-
-            <div class="form-row">
-                <button type="submit">Comprar</button>
-            </div>
-        </form>
-    </section>
 
     <section class="section" id="about">
         <img class="logoabout" src="/imagens/tecLogo.png" alt="">

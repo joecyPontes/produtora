@@ -4,11 +4,13 @@
 @import url('home.css');
 @import url('eventos.css');
 @import url('header.css');
-:root{
-    --corlaranja:#FF6102;
+@import url('ingresso.css');
+
+:root {
+    --corlaranja: #FF6102;
     --corvermelho: #B7021C;
     --corroxo: #61029C;
-    --corbranco:hsl(0, 0%, 100%);
+    --corbranco: hsl(0, 0%, 100%);
     --corpreto: hsl(0, 0%, 0%);
 }
 
@@ -16,7 +18,7 @@
 
 
 
-*{
+* {
     font-family: "Sora", sans-serif;
     font-weight: 400;
     margin: 0;
@@ -25,44 +27,45 @@
 
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    background-image:  linear-gradient(to left, var(--corroxo), var(--corvermelho), var(--corlaranja));
+body {
+    background-image: linear-gradient(to left, var(--corroxo), var(--corvermelho), var(--corlaranja));
     background-size: 500% 100%;
     animation: degradeAnimado 2.6s infinite alternate;
 }
 
 
-@keyframes degradeAnimado{
-    0%{
+@keyframes degradeAnimado {
+    0% {
         background-position-x: 0%;
     }
-    100%{
+
+    100% {
         background-position-x: 100%;
     }
 }
 
-.section{
-    height: 100vh;
+.section {
+    height: auto;
 
     padding-block: 2.5rem;
 }
 
-.section h1{
+.section h1 {
     color: var(--corbranco);
     text-align: center;
 }
 
 @media screen and (max-width: 320px) {
-  body {
-    font-size: 14px;
-  }
+    body {
+        font-size: 14px;
+    }
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }

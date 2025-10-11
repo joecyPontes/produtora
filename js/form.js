@@ -66,19 +66,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            // mapeamento dos links de pagamento
-            const links = {
-                'pista-individual': 'https://mpago.la/26utHM6',
-                'pista-casadinha': 'https://mpago.la/1dy8ou3',
-                'backstage-individual': 'https://mpago.la/2TThspw',
-                'backstage-casadinha': 'https://mpago.la/2N1y5Ds',
-                'early-entry-pista': 'https://mpago.la/2R4QuMW',
-                'early-entry-backstage': 'https://mpago.la/1xEPECX',
+            // calcula preço baseado no tipo selecionado (mapa cliente)
+            const priceMap = {
+                'pista-individual': 0.10,
+                'pista-casadinha': 0.10,
+                'backstage-individual': 0.10,
+                'backstage-casadinha': 0.10,
+                'early-entry-pista': 0.10,
+                'early-entry-backstage': 0.10
             };
 
-            const targetUrl = links[tipoVal] || 'obrigado.html';
+            const price = priceMap[tipoVal] || 0;
 
-            // monta payload com os dados do formulário
+            // monta payload com os dados do formulário (inclui price)
             const payload = {
                 nome: document.getElementById('nome') ? document.getElementById('nome').value : '',
                 cpf: cpfVal,
@@ -86,71 +86,92 @@ document.addEventListener('DOMContentLoaded', function () {
                 telefone: telVal,
                 email: document.getElementById('email') ? document.getElementById('email').value : '',
                 tipo: tipoVal,
+                price: price,
                 timestamp: new Date().toISOString()
             };
 
-            const webhookUrl = 'https://hook.us2.make.com/xhydjtkf74bqsj6n1m7k45ugreyyehje';
+            const webhookUrl = 'https://hook.us2.make.com/5766qvcmq71guewfemirgcrnluxahofb';
 
-            // Abrir link de pagamento em nova aba de forma síncrona para evitar bloqueio de popup
+            // Desabilita botão de submit para evitar envios duplicados
+            const submitBtn = document.querySelector('#form-ingressos button[type="submit"]');
+            let originalBtnText = '';
+            if (submitBtn) {
+                originalBtnText = submitBtn.textContent;
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Aguarde...';
+            }
+
             try {
-                window.open(targetUrl, '_blank');
-            } catch (err) {
-                // se falhar ao abrir, tentamos navegar na mesma aba como fallback
-                window.location.href = targetUrl;
-            }
-            // Enviar como JSON (campos separados) via HTTPS para o Make receber variáveis separadas.
-            // Fluxo simples e confiável:
-            // 1) abrir nova aba para pagamento
-            // 2) tentar POST JSON com timeout
-            // 3) se falhar, tentar sendBeacon como fallback
-            // 4) redirecionar a aba atual para "obrigado.html"
-
-            console.log('[form] Enviando payload JSON ao webhook (HTTPS):', payload);
-
-            async function postJsonOnce(url, data, timeout = 2500) {
+                console.log('[form] enviando payload ao Make:', payload);
                 const controller = new AbortController();
-                const id = setTimeout(() => controller.abort(), timeout);
-                try {
-                    const resp = await fetch(url, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify(data),
-                        mode: 'cors',
-                        keepalive: true,
-                        signal: controller.signal
-                    });
-                    clearTimeout(id);
-                    return resp;
-                } catch (err) {
-                    clearTimeout(id);
-                    console.warn('[webhook] POST JSON erro:', err);
-                    return null;
-                }
-            }
+                const timeout = setTimeout(() => controller.abort(), 7000);
 
-            const resp = await postJsonOnce(webhookUrl, payload, 2500);
-            if (resp && (resp.ok || resp.status === 204)) {
-                console.log('[webhook] POST JSON OK:', resp.status);
-                window.location.href = 'obrigado.html';
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                    mode: 'cors',
+                    signal: controller.signal
+                });
+                clearTimeout(timeout);
+
+                // ler como texto primeiro (mais seguro) e tentar parsear JSON
+                const text = await response.text();
+                let data = null;
+                try {
+                    data = text ? JSON.parse(text) : null;
+                } catch (err) {
+                    console.warn('[form] resposta do Make não é JSON:', text);
+                    data = null;
+                }
+
+                // tenta extrair init_point/link de várias formas
+                let link = null;
+                if (data) {
+                    link = data.link || data.init_point || data.sandbox_init_point || data.initPoint || null;
+                }
+
+                // fallback: extrair do texto via regex (caso Make retorne o objeto dentro de um campo Data longo)
+                if (!link && text) {
+                    // procura por "init_point":"..." ou "sandbox_init_point":"..."
+                    const m = text.match(/"init_point"\s*:\s*"([^"]+)"/i) || text.match(/"sandbox_init_point"\s*:\s*"([^"]+)"/i);
+                    if (m && m[1]) link = m[1];
+                }
+
+                if (!response.ok) {
+                    console.error('[form] Make retornou status:', response.status, text);
+                    if (response.status === 410) {
+                        alert('Erro: webhook inválido/expirado (410). Gere um novo webhook no Make e atualize o código.');
+                    } else {
+                        alert('Erro na criação do pagamento. Tente novamente.');
+                    }
+                    return;
+                }
+
+                if (link) {
+                    console.log('[form] link encontrado:', link);
+                    window.open(link, '_blank');
+                    window.location.href = 'obrigado.html';
+                    return;
+                } else {
+                    console.warn('[form] não foi possível localizar init_point/link na resposta:', text);
+                    alert('Erro ao gerar link de pagamento. Verifique o cenário no Make.');
+                    return;
+                }
+            } catch (err) {
+                console.error('[form] erro ao enviar para o Make:', err);
+                if (err.name === 'AbortError') {
+                    alert('Tempo esgotado ao conectar com o servidor. Tente novamente.');
+                } else {
+                    alert('Erro ao conectar com o servidor. Tente novamente.');
+                }
                 return;
-            }
-
-            // fallback: sendBeacon
-            if (navigator && navigator.sendBeacon) {
-                try {
-                    const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
-                    const ok = navigator.sendBeacon(webhookUrl, blob);
-                    console.log('[webhook] sendBeacon resultado:', ok);
-                } catch (err) {
-                    console.warn('[webhook] sendBeacon falhou:', err);
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
                 }
             }
-
-            // finaliza redirecionando mesmo que o envio tenha falhado
-            window.location.href = 'obrigado.html';
         });
     }
 

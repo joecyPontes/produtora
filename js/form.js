@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 timestamp: new Date().toISOString()
             };
 
-            const webhookUrl = 'https://hook.us2.make.com/5766qvcmq71guewfemirgcrnluxahofb';
+            const webhookUrl = 'https://hook.us2.make.com/wx7kbc01chv9p8ej1kzmf2hwau4k0htd';
 
             // Desabilita botão de submit para evitar envios duplicados
             const submitBtn = document.querySelector('#form-ingressos button[type="submit"]');

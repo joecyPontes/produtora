@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     return;
                 } else {
                     console.warn('[form] não foi possível localizar init_point/link na resposta:', text);
-                    alert('Erro ao gerar link de pagamento. Verifique o cenário no Make.');
+                    alert('Erro ao gerar link de pagamento. Verifique o cenário');
                     return;
                 }
             } catch (err) {

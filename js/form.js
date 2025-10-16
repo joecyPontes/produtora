@@ -68,12 +68,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // calcula preço baseado no tipo selecionado (mapa cliente)
             const priceMap = {
-                'pista-individual': 0.10,
-                'pista-casadinha': 0.10,
-                'backstage-individual': 0.10,
-                'backstage-casadinha': 0.10,
-                'early-entry-pista': 0.10,
-                'early-entry-backstage': 0.10
+                'Pista-Individual': 0.10,
+                'Pista-Casadinha': 0.10,
+                'Backstage-Individual': 0.10,
+                'Backstage-Casadinha': 0.10,
+                'Early-Entry-Pista': 0.10,
+                'Early-Entry-Backstage': 0.10
             };
 
             const price = priceMap[tipoVal] || 0;

@@ -19,8 +19,8 @@
     z-index: 1;
     opacity: 1;
     /* Define a opacidade do iframe */
-    width: 300px;
-    height: 300px;
+    width: auto;
+    height: 330px;
     border-radius: 4px;
     border: var(--corlaranja) solid 2px;
     box-shadow: var(--corroxa) 0px 0px 10px;

@@ -89,7 +89,6 @@
 }
 
 #about {
-    width: 100%;
     background-color: var(--corpreto);
     display: flex;
     flex-direction: column;
@@ -104,8 +103,7 @@
 }
 
 #about img {
-    width: 30vh;
-    height: 30vh;
+    width: 300px;
 }
 
 .textotec {

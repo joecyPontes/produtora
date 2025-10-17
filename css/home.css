@@ -3,38 +3,25 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    background-image: url('/imagens/BackgroundL_S.jpg');
-    width: 100%;
+    background-image: url('/imagens/ap.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    height: 130vh;
 }
 
-.cont {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 34vh;
-    height: 36vh;
-    padding: 32px;
-    border-radius: 32px;
-    overflow: hidden;
-
-}
 
 #logohome {
-    width: 30vh;
+    width: 300px;
 }
 
 #youtube-iframe {
     z-index: 1;
     opacity: 1;
     /* Define a opacidade do iframe */
-    width: auto;
-    height: 250px;
-    border-radius: 0px;
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
     border: var(--corlaranja) solid 2px;
     box-shadow: var(--corroxa) 0px 0px 10px;
 }

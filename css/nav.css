@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     position: fixed;
     bottom: 1.5rem;
     left: 0;
@@ -12,32 +12,33 @@
     font-size: 1rem;
 }
 
-.navlist{
+.navlist {
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navlink{
+.navlink {
     color: var(--corbranco);
     font-weight: lighter;
     text-decoration: none;
 }
 
-.navlink:hover{
+.navlink:hover {
     color: rgb(185, 185, 185);
 }
 
-.disco i{
+.disco i {
     animation: girar 2s linear infinite;
 }
 
-@keyframes girar{
-    0%{
+@keyframes girar {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
@@ -52,25 +53,30 @@
     0% {
         box-shadow: 0 0 20px #FF6102;
     }
+
     20% {
         box-shadow: 0 0 20px #EF2402;
     }
+
     40% {
         box-shadow: 0 0 20px #B7021C;
     }
+
     60% {
         box-shadow: 0 0 20px #8F0253;
     }
+
     80% {
         box-shadow: 0 0 20px #61029C;
     }
+
     100% {
         box-shadow: 0 0 20px #330068;
     }
 }
 
 
-.navlink i span{
+.navlink i span {
     padding: 2px;
     display: flex;
     text-align: center;

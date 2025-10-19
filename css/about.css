@@ -123,16 +123,25 @@
 
 
 
+.djs {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    padding: 6%;
+}
+
 
 
 
 .card-dj {
-    width: 20vh;
-    height: 18vh;
+    width: 22vh;
+    min-height: 28vh;
+    max-height: 50vh;
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -145,53 +154,60 @@
 
 .card-dj img {
     max-width: 100%;
-    max-height: 15vh;
+    max-height: 20vh;
     object-fit: cover;
+    object-position: top;
 }
 
 .info {
     max-width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #000000;
+    font-size: .8rem;
+
+}
+
+.vertentes {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    gap: 2px;
+}
+
+li {
+    list-style: none;
 }
 
 .info a {
-    color: #000000;
+    color: #8f8f8f;
     text-decoration: none;
     text-align: center;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
     display: flex;
     max-width: 100%;
     flex-direction: row;
     font-size: .6rem;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
 }
 
 .info a:hover {
-    color: #c13584;
+    color: var(--corvermelho);
 }
 
 .info a i {
     display: flex;
     max-width: 100%;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 .cards {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: space-evenly;
-}
-
-.djs {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-    padding: 6%;
 }

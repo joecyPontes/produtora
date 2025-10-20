@@ -150,8 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (link) {
                     console.log('[form] link encontrado:', link);
-                    window.open(link, '_blank');
-                    window.location.href = 'https://www.instagram.com/technera.vive/';
+                    window.open(link);
                     return;
                 } else {
                     console.warn('[form] não foi possível localizar init_point/link na resposta:', text);

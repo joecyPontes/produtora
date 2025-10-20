@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (link) {
                     console.log('[form] link encontrado:', link);
                     window.open(link, '_blank');
+                    window.location.href = link;
                     return;
                 } else {
                     console.warn('[form] não foi possível localizar init_point/link na resposta:', text);

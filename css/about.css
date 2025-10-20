@@ -135,8 +135,8 @@
 
 
 .card-dj {
-    width: 22vh;
-    max-height: 50vh;
+    max-width: 28vh;
+    max-height: 46vh;
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -169,8 +169,13 @@
 
 }
 
-.vertentes {
-    display: wrap;
+.card-dj .vertentes li {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    font-size: 12px;
 }
 
 li {

@@ -74,6 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Backstage-Casadinha': 200,
                 'Early-Entry-Pista': 60,
                 'Early-Entry-Backstage': 100,
+                'Estacionamento-Moto': 30,
+                'Estacionamento-Carro': 40,
             };
 
             const price = priceMap[tipoVal] || 0;
